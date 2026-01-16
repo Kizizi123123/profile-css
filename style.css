@@ -1,0 +1,237 @@
+:root{
+  --bg: #f4f1ea;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #8b5e34; /* primary color */
+  --border: #e5e7eb;
+}
+
+*{
+  box-sizing: border-box; 
+}
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+
+header, nav, main, footer{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+
+
+main{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+/* ให้ header อ่านง่ายนิดนึง */
+header{
+  padding-top: 22px;
+  padding-bottom: 8px;
+}
+
+header h1{
+  margin: 0 0 6px;
+  font-size: 2rem; /* hierarchy */
+  letter-spacing: 0.2px;
+}
+
+header p{
+  margin: 0;
+  color: var(--muted);
+}
+
+/* -----------------------
+  Task C: Typography & Colors
+  - h1 เด่น
+  - p อ่านง่าย
+  - ลิงก์ hover ชัดเจน
+------------------------ */
+
+h2{
+  margin-top: 26px;
+  margin-bottom: 10px;
+  font-size: 1.35rem;
+  border-left: 6px solid var(--primary);
+  padding-left: 10px;
+}
+
+h3{
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+a{
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover{
+  text-decoration: underline;
+  filter: brightness(0.9);
+}
+
+
+
+nav{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+nav h2{
+  margin-top: 0;
+}
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a{
+  display: inline-block;
+  padding: 10px 12px;
+  background: rgba(139, 94, 52, 0.10);
+  border: 1px solid rgba(139, 94, 52, 0.25);
+  border-radius: 999px; /* badge */
+  font-weight: 700;
+}
+
+nav a:hover{
+  background: rgba(139, 94, 52, 0.16);
+}
+
+
+
+img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+figure{
+  margin: 10px 0 14px;
+}
+
+figcaption{
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 14px;
+  background: #fff;
+}
+
+th, td{
+  border: 1px solid var(--border);
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th{
+  background: rgba(139, 94, 52, 0.08);
+}
+
+
+
+fieldset{
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 12px 0;
+}
+
+legend{
+  padding: 0 8px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+label{
+  font-weight: 700;
+}
+
+input, select, textarea{
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+  background: #fff;
+}
+
+button{
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover{
+  filter: brightness(0.95);
+}
+
+
+
+footer{
+  color: var(--muted);
+  padding-bottom: 24px;
+}
+
+
+
+@media (max-width: 768px){
+  header, nav, main, footer{
+    padding: 12px;
+  }
+
+  header h1{
+    font-size: 1.6rem;
+  }
+
+  nav ul{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav a{
+    border-radius: 14px; /* มือถือกดง่าย */
+  }
+
+  /* ตารางบนมือถือให้เลื่อนได้ ไม่แตก layout */
+  table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
